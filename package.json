@@ -1,0 +1,14 @@
+{
+  "name": "harp-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "HARP local song studio (Kitharaion) - local-first AI song generation pipeline",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

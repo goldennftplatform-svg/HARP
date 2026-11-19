@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const target='D:\\Harpsachord';
+await fs.access(target);
+await fs.mkdir(path.join(target,'backups'),{recursive:true});
+await fs.mkdir(path.join(target,'logs'),{recursive:true});
+await fs.cp(path.join(root,'data'),path.join(target,'data'),{recursive:true,force:false,errorOnExist:true});
+await fs.copyFile('C:\\pinokio\\api\\Maestro.git\\app\\wgp_config.json',path.join(target,'backups','maestro-wgp-config-before-storage.json'),fs.constants.COPYFILE_EXCL);
+console.log('Copied studio sessions to D: and backed up Maestro config. Original studio data is retained.');

@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Local runtime data (models/audio/projects live on D:\Harpsachord via config.json)
+data/
+*.log
+*.tmp
+
+# Tool/session artifacts
+.playwright-mcp/
+pinokio_agent/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local env/overrides
+.env
+.env.*
+*.local
+
+# Machine-specific config (use config.example.json)
+config.json
